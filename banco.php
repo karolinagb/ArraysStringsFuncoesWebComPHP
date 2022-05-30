@@ -41,6 +41,8 @@ $contasCorrentes =
     ]
 ];
 
+TitularComLetrasMaiusculas($contasCorrentes[0]);
+
 $contasCorrentes[0] = Sacar($contasCorrentes[0], 500);
 
 $contasCorrentes[1] = Depositar($contasCorrentes[1], 500);
@@ -54,5 +56,3 @@ foreach($contasCorrentes as $index => $conta){
 foreach($contasCorrentes as $index => $conta){
     ExibeMensagem("$index {$conta['titular']} {$conta['saldo']}");
 }
-
-echo $contasCorrentes[0];
