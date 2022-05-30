@@ -23,8 +23,6 @@ $conta3 = [
     'saldo' => 300
 ];
 
-
-
 $contasCorrentes = 
 [
     0 => [
@@ -49,7 +47,15 @@ $contasCorrentes[1] = Depositar($contasCorrentes[1], 500);
 
 //string simples
 foreach($contasCorrentes as $index => $conta){
-    ExibeMensagem("$index $conta[titular] $conta[saldo]");
+    // nosso array index nao tem indice 0 e sim titular e saldo entao isso dará erro
+    // list($titular, $saldo) = $conta;
+    //temos que informar qual indice nesse caso sera recebido pela variavel
+    list('titular' => $titular, 'saldo' => $saldo) = $conta;
+
+    // outra forma de escrever a funcao list:
+    ['titular' => $titular, 'saldo' => $saldo] = $conta;
+
+    ExibeMensagem("$index $titular $saldo");
 }
 
 //string complexa
