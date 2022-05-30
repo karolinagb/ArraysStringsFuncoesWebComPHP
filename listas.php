@@ -1,7 +1,7 @@
 <?php
 
 //Instanciando um array
-$idadeList = array(22,23,19,21,30,25);
+// $idadeList = array(22,23,19,21,30,25);
 //ou
 $idadeList = [22,23,19,21,30,25];
 
@@ -9,6 +9,8 @@ $idadeList = [22,23,19,21,30,25];
 //$idadeVinicius indice 0, vai pegar o indice 0 do array $idadeList
 //se quiser pular um item é só deixar entre vírgulas vazia
 list($idadeVinicius, $idadeJoao, $idadeMaria, , $idadeKarol) = $idadeList;
+
+unset($idadeList[4]);
 
 $primeiraaIdade = $idadeList[0];
 $terceiraIdade = $idadeList[2];
@@ -20,7 +22,11 @@ echo "\n";
 $idadeList[] = 80;
 
 foreach($idadeList as $idade){
+    echo "Idades do array";
     echo $idade . PHP_EOL;
+    
 }
+
+echo "********************";
 
 echo "$idadeVinicius, $idadeJoao, $idadeMaria, $idadeKarol";

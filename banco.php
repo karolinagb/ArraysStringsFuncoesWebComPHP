@@ -39,11 +39,15 @@ $contasCorrentes =
     ]
 ];
 
+// apaga a varia da memória
+//a funcao tambem pode receber mais de uma variavel para excluir por vez
+unset($contasCorrentes['1']);
+
 TitularComLetrasMaiusculas($contasCorrentes[0]);
 
 $contasCorrentes[0] = Sacar($contasCorrentes[0], 500);
 
-$contasCorrentes[1] = Depositar($contasCorrentes[1], 500);
+// $contasCorrentes[1] = Depositar($contasCorrentes[1], 500);
 
 //string simples
 foreach($contasCorrentes as $index => $conta){
