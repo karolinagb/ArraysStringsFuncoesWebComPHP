@@ -3,7 +3,7 @@ echo "Olá. Arquivo de funções aqui." . PHP_EOL;
 
 function ExibeMensagem(string $mensagem)
 {
-    echo $mensagem . PHP_EOL;
+    echo $mensagem . '</br>';
 }
 
 function Sacar(array $conta, float $valor) : array
@@ -41,3 +41,10 @@ function TitularComLetrasMaiusculas(array &$conta)
 
     echo $conta['titular'] . PHP_EOL;
 }
+
+function exibeConta(array $conta){
+    ['titular' => $titular, 'saldo' => $saldo] = $conta;
+    echo "<li> Titular: $titular. Saldo: $saldo</li>";
+}
+?>
+
